@@ -18,7 +18,11 @@ Once that's running, I did this to get into a shell in the container:
 sudo docker exec -it dyna bash
 ```
 
-In the shell I first ran `alias python=python2`, and then `make`. The result was lots of stuff printing to the screen, ending with this:
+In the shell I ran `alias python=python2` to change the default python from 3 to 2.
+
+Then I ran `cd /mnt` to go to where the Dyna code is located.
+
+Then I ran `make`. The result was lots of stuff printing to the screen, ending with this:
 ```
 Preprocessing executable 'dyna' for dyna-0.4...
 [25 of 37] Compiling Dyna.XXX.Automata.NamedAut ( src/Dyna/XXX/Automata/NamedAut.hs, dist/build/dyna/dyna-tmp/Dyna/XXX/Automata/NamedAut.o )
