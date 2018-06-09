@@ -1,4 +1,4 @@
-To build [the Dockerfile](docker/Dockerfile) I did this (from `dyna/docker/`):
+To build [the Dockerfile](Dockerfile) I did this (from `dyna/docker/`):
 ```
 sudo docker build -f Dockerfile -t	                        \
   jeffreybbrown/dyna:new .
