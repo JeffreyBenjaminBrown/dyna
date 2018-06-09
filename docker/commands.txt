@@ -1,0 +1,12 @@
+sudo docker build -f Dockerfile -t	                        \
+  jeffreybbrown/dyna:new .	                                \
+  | tee logs/"build-log.`date`.txt"
+
+sudo docker run --name dyna -it -v /home/jeff/code/dyna:/mnt    \
+  -p 9090:8888 -d -h 127.0.0.1                                  \
+  jeffreybbrown/dyna:new
+
+sudo docker run --entrypoint=/root/run-jupyter.sh               \
+                --name dyna -it -v /home/jeff/code/dyna:/mnt    \
+  -p 9090:8888 -d -h 127.0.0.1                                  \
+  jeffreybbrown/dyna:new

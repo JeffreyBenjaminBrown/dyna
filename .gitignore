@@ -8,6 +8,7 @@
 
 *.d   # debugger's output directory.
 
+.stack-work/
 dist/
 examples/*.d
 examples/*.hist
